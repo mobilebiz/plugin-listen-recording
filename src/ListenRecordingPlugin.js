@@ -3,7 +3,7 @@ import { VERSION, Tab } from '@twilio/flex-ui';
 import { FlexPlugin } from '@twilio/flex-plugin';
 import japanese from './i18n/JP'; // 日本語サブセット
 
-import Record from './components/Record/Record';
+import RecordContainer from './components/Record/Record.Container';
 
 const PLUGIN_NAME = 'ListenRecordingPlugin';
 
@@ -26,7 +26,7 @@ export default class ListenRecordingPlugin extends FlexPlugin {
     // 通録コンポーネントの配置
     flex.TaskCanvasTabs.Content.add(
       <Tab label='Record' key='record-tab'>
-        <Record key='record-component' />
+        <RecordContainer key='record-component' />
       </Tab>,
     );
   }
