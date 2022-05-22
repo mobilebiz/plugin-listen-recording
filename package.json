@@ -1,11 +1,19 @@
 {
   "name": "plugin-listen-recording",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Listen recording in Wrapup plugin for Twilio Flex",
+  "author": {
+    "email": "katsumi@gij.com",
+    "name": "Katsumi Takahashi"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
+    "postinstall": "flex-plugin pre-script-check",
     "test": "twilio flex:plugins:test",
     "start": "twilio flex:plugins:start",
-    "postinstall": "flex-plugin pre-script-check"
+    "build": "twilio flex:plugins:build",
+    "deploy": "twilio flex:plugins:deploy --changelog='Deploy at '+`date +%Y%m%d_%H%M%S`"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",

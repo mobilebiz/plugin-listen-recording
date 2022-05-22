@@ -1,31 +1,43 @@
-# Your custom Twilio Flex Plugin
+# 通録確認プラグイン
 
-Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
+Twilio Flex でラップアップ（後処理）中に、終了した会話の録音データを聞くプラグインです。  
+同時に、コンソールの日本語化も行っています。
 
-## Setup
+![スクリーンショット](./screenshot.png)
 
-Make sure you have [Node.js](https://nodejs.org) as well as [`npm`](https://npmjs.com). We support Node >= 10.12 (and recommend the _even_ versions of Node). Afterwards, install the dependencies by running `npm install`:
+## 録音の設定
 
-```bash
-cd 
+[こちら](https://www.twilio.com/docs/flex/developer/insights/enable-dual-channel-recordings)の記事に従って、Twilio Studio 内で通話録音を設定しておいてください。
 
-# If you use npm
-npm install
+## 必要要件
+
+[Flexプラグインの準備](https://qiita.com/mobilebiz/items/eeca1ce20bb5b561b515)が終わっていること。
+
+## セットアップ
+
+```sh
+git clone https://github.com/mobilebiz/plugin-listen-recording.git
+cd plugin-listen-recording
 ```
 
-Next, please install the [Twilio CLI](https://www.twilio.com/docs/twilio-cli/quickstart) by running:
+## テスト
 
-```bash
-brew tap twilio/brew && brew install twilio
+```sh
+npm run test
 ```
 
-Finally, install the [Flex Plugin extension](https://github.com/twilio-labs/plugin-flex/tree/v1-beta) for the Twilio CLI:
+## ローカル実行
 
-```bash
-twilio plugins:install @twilio-labs/plugin-flex
+```sh
+npm run start
 ```
 
-## Development
+## ビルド＆デプロイ
 
-Run `twilio flex:plugins --help` to see all the commands we currently support. For further details on Flex Plugins refer to our documentation on the [Twilio Docs](https://www.twilio.com/docs/flex/developer/plugins/cli) page.
+```sh
+npm run build && npm run deploy
+```
 
+## リリース
+
+デプロイ時に表示されたリンクをコピーしてください。
